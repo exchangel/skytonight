@@ -1,0 +1,14 @@
+[
+  { "id": "quadrantids", "name": "Kuadrantid", "peakNight": "01-03", "zhr": 110, "ra": 15.33, "dec": 49.5, "speed": 41, "parent": "2003 EH1 (asteroit)" },
+  { "id": "lyrids", "name": "Lirid", "peakNight": "04-22", "zhr": 18, "ra": 18.07, "dec": 34.0, "speed": 49, "parent": "C/1861 G1 Thatcher kuyruklu yıldızı" },
+  { "id": "eta-aquariids", "name": "Eta Akuarid", "peakNight": "05-05", "zhr": 50, "ra": 22.53, "dec": -1.0, "speed": 66, "parent": "Halley kuyruklu yıldızı" },
+  { "id": "s-delta-aquariids", "name": "Güney Delta Akuarid", "peakNight": "07-30", "zhr": 25, "ra": 22.67, "dec": -16.0, "speed": 41, "parent": "96P/Machholz" },
+  { "id": "perseids", "name": "Perseid", "peakNight": "08-12", "zhr": 100, "ra": 3.2, "dec": 58.0, "speed": 59, "parent": "109P/Swift-Tuttle" },
+  { "id": "draconids", "name": "Drakonid", "peakNight": "10-08", "zhr": 10, "ra": 17.47, "dec": 54.0, "speed": 20, "parent": "21P/Giacobini-Zinner" },
+  { "id": "orionids", "name": "Orionid", "peakNight": "10-21", "zhr": 20, "ra": 6.33, "dec": 16.0, "speed": 66, "parent": "Halley kuyruklu yıldızı" },
+  { "id": "s-taurids", "name": "Güney Taurid", "peakNight": "11-04", "zhr": 5, "ra": 3.47, "dec": 13.0, "speed": 27, "parent": "2P/Encke (yavaş ateş topları)" },
+  { "id": "n-taurids", "name": "Kuzey Taurid", "peakNight": "11-11", "zhr": 5, "ra": 3.87, "dec": 22.0, "speed": 29, "parent": "2P/Encke (yavaş ateş topları)" },
+  { "id": "leonids", "name": "Leonid", "peakNight": "11-17", "zhr": 15, "ra": 10.13, "dec": 22.0, "speed": 71, "parent": "55P/Tempel-Tuttle" },
+  { "id": "geminids", "name": "Geminid", "peakNight": "12-13", "zhr": 150, "ra": 7.47, "dec": 32.0, "speed": 35, "parent": "3200 Phaethon (asteroit)" },
+  { "id": "ursids", "name": "Ursid", "peakNight": "12-21", "zhr": 10, "ra": 14.47, "dec": 75.0, "speed": 33, "parent": "8P/Tuttle" }
+]

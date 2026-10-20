@@ -1,0 +1,407 @@
+{
+  "_comment": "Elle yazılmış Türkçe içerik. build_catalog.py bu dosyayı OpenNGC verisiyle birleştirip data/catalog.json üretir. Uzaklıklar ışık yılı (yaklaşık, yaygın kabul gören değerler). 'tip' = yıldızdan yıldıza bulma tarifi.",
+
+  "include": [
+    "NGC0457", "NGC0752", "NGC7789", "NGC0663", "NGC2264", "NGC2169", "NGC2362", "NGC6633", "IC4665", "IC4756",
+    "NGC6940", "NGC2158", "NGC6819", "NGC1502",
+    "NGC2403", "NGC2903", "NGC4565", "NGC4631", "NGC0891", "NGC0253", "NGC3628", "NGC7331", "NGC3115", "NGC4449",
+    "NGC5866", "NGC6946", "NGC2841",
+    "NGC6543", "NGC7662", "NGC6826", "NGC7009", "NGC3242", "NGC2392", "NGC6210", "NGC7027", "NGC1535", "NGC6572", "NGC7293",
+    "NGC6888", "NGC6960", "NGC6992", "NGC7000",
+    "NGC5139",
+    "C041", "Cl399", "Mel111"
+  ],
+
+  "rename": {
+    "C041": "Mel25",
+    "Cl399": "Cr399"
+  },
+
+  "overrides": {
+    "NGC2168": { "mag": 5.3 },
+    "NGC6171": { "mag": 7.9 },
+    "NGC6266": { "mag": 6.6 },
+    "NGC6637": { "mag": 7.6 },
+    "NGC6656": { "mag": 5.1 },
+    "NGC6681": { "mag": 7.9 },
+    "NGC6838": { "mag": 6.1 },
+    "NGC2362": { "mag": 4.1 },
+    "NGC253": { "mag": 7.1 },
+    "NGC4565": { "mag": 9.6 },
+    "NGC6888": { "mag": 7.4 },
+    "NGC6960": { "mag": 7.0, "size": [70, 6] },
+    "NGC6992": { "mag": 7.0 },
+    "NGC7000": { "mag": 4.0 },
+    "NGC2264": { "kind": "open" },
+    "NGC1976": { "kind": "nebula" },
+    "C041": { "mag": 0.5 },
+    "Mel111": { "mag": 1.8 },
+    "M040": { "kind": "double", "mag": 9.6, "magB": 10.1, "sep": 51.7 }
+  },
+
+  "manual": [
+    {
+      "id": "NGC869-884", "code": "NGC 869 / 884", "kind": "open",
+      "ra": "02:20:45", "dec": "+57:08:00", "mag": 3.7, "size": [60, 30], "con": "Per"
+    },
+    {
+      "id": "NGC2244", "code": "NGC 2244", "kind": "open",
+      "ra": "06:31:55", "dec": "+04:56:35", "mag": 4.8, "size": [24, 24], "con": "Mon"
+    },
+    {
+      "id": "Mel20", "code": "Mel 20", "kind": "open",
+      "ra": "03:26:54", "dec": "+49:07:00", "mag": 1.2, "size": [185, 185], "con": "Per"
+    }
+  ],
+
+  "objects": {
+    "M1": {
+      "name": "Yengeç Bulutsusu", "featured": true, "distanceLy": 6500,
+      "info": "1054 yılında Çinli gökbilimcilerin gündüz bile gördüğü bir süpernova patlamasının kalıntısı. Merkezinde saniyede 30 kez dönen bir nötron yıldızı (pulsar) var. Gaz bulutu hâlâ saniyede ~1.500 km hızla genişliyor.",
+      "tip": "Boğa'nın güney boynuzunun ucundaki Zeta Tauri'nin (ζ Tau) ~1° kuzeybatısında. 130 mm'de soluk, oval bir ışık lekesi olarak görünür; karanlık gökyüzü ister."
+    },
+    "M2": { "distanceLy": 37500, "info": "Bilinen en büyük küresel kümelerden biri; ~150.000 yıldız içerir ve 13 milyar yaşında." },
+    "M3": {
+      "featured": true, "distanceLy": 33900,
+      "info": "Yaklaşık yarım milyon yıldızdan oluşan parlak bir küresel küme. Değişen yıldız sayısı bakımından rekortmen: içinde 270'ten fazla değişen yıldız bulunuyor.",
+      "tip": "Arcturus ile Cor Caroli (α CVn) arasındaki çizginin kabaca ortasında, biraz Arcturus tarafına yakın."
+    },
+    "M4": {
+      "distanceLy": 7200,
+      "info": "Bize en yakın küresel kümelerden biri. Merkezinden geçen yıldız 'çubuğu' küçük teleskoplarda bile seçilir.",
+      "tip": "Antares'in yalnızca 1,3° batısında; düşük büyütmede ikisi aynı alana sığar. Türkiye'den alçakta kalır."
+    },
+    "M5": {
+      "featured": true, "distanceLy": 24500,
+      "info": "Bilinen en yaşlı küresel kümelerden; yaşı ~13 milyar yıl. Yoğun, parlak bir çekirdeği var.",
+      "tip": "Yılan'ın başında, 5 Serpentis yıldızının hemen kuzeybatısında."
+    },
+    "M6": {
+      "name": "Kelebek Kümesi", "distanceLy": 1600,
+      "info": "Yıldızları kanatlarını açmış bir kelebek gibi dizilmiş açık küme. En parlak üyesi turuncu BM Scorpii.",
+      "tip": "Akrep'in kuyruğunun ucunun (iğne) ~5° kuzeyinde. Türkiye'den ufka yakın; güneyi açık bir yer gerekir."
+    },
+    "M7": {
+      "name": "Ptolemy Kümesi", "distanceLy": 980,
+      "info": "Batlamyus'un (Ptolemy) MS 130 civarında kaydettiği, bilinen en eski 'bulutsu' kayıtlarından. 1°'den büyük; dürbünle en güzel.",
+      "tip": "Akrep'in iğnesinin ~4° kuzeydoğusunda, Samanyolu'nun parlak bölgesinde."
+    },
+    "M8": {
+      "name": "Lagün Bulutsusu", "featured": true, "distanceLy": 4100,
+      "info": "Yeni yıldızların doğduğu dev bir gaz bulutu. Ortasından geçen karanlık toz şeridi 'lagünü' oluşturur; içinde genç açık küme NGC 6530 var. Karanlık gökyüzünde çıplak gözle bile seçilir.",
+      "tip": "Yay'ın 'çaydanlık' şeklinin ağzından (Alnasl, γ Sgr) ~6° yukarıda, Samanyolu'nun içinde. Türkiye'den yaz akşamları güneyde alçakta."
+    },
+    "M10": { "distanceLy": 14300, "info": "Yılancı'daki parlak küresel kümelerden; M12 ile birlikte 'ikiz' olarak bilinir." },
+    "M11": {
+      "name": "Yaban Ördeği Kümesi", "featured": true, "distanceLy": 6200,
+      "info": "Binlerce yıldızdan oluşan, açık kümelerin en zenginlerinden. En parlak yıldızları V şeklinde, uçan bir ördek sürüsünü andırır.",
+      "tip": "Kalkan takımyıldızındaki Beta Scuti'nin (β Sct) ~2° güneydoğusunda, Samanyolu'nun parlak bir parçasının içinde."
+    },
+    "M12": { "distanceLy": 16000, "info": "M10'un 3° kuzeybatısındaki daha seyrek yapılı küresel küme." },
+    "M13": {
+      "name": "Herkül Küresel Kümesi", "featured": true, "distanceLy": 22200,
+      "info": "Kuzey gökyüzünün en ünlü küresel kümesi: ~300.000 yıldızdan oluşan bir yıldız topu. 1974'te Arecibo radyo teleskobundan insanlığın ilk bilinçli uzaylılara mesajı bu kümeye gönderildi.",
+      "tip": "Herkül'ün 'kilit taşı' dörtgeninin batı kenarında: Eta Herculis'ten (η Her) Zeta Herculis'e (ζ Her) giden çizginin ~1/3'ünde, η'ya yakın. Karanlıkta çıplak gözle bile bulanık bir yıldız gibi."
+    },
+    "M15": {
+      "name": "Pegasus Küresel Kümesi", "featured": true, "distanceLy": 33600,
+      "info": "Çekirdeği çökmüş, Samanyolu'nun en yoğun küresel kümelerinden biri. İçinde bir gezegenimsi bulutsu (Pease 1) var; küresel kümede bulunan ilk örnek.",
+      "tip": "Pegasus'un burnu Enif'ten (ε Peg) kuzeybatıya ~4°; aynı alanda iki sönük yıldızla küçük bir üçgen oluşturur."
+    },
+    "M16": {
+      "name": "Kartal Bulutsusu", "distanceLy": 7000,
+      "info": "Hubble'ın ünlü 'Yaratılış Sütunları' fotoğrafının çekildiği bölge. Sütunlar gözle görülmez; teleskopta açık küme ve çevresinde soluk bir parıltı seçilir.",
+      "tip": "M17'nin ~2,5° kuzeyinde."
+    },
+    "M17": {
+      "name": "Omega (Kuğu) Bulutsusu", "featured": true, "distanceLy": 5500,
+      "info": "Samanyolu'nun en parlak yıldız doğum bölgelerinden. Küçük teleskopta suyun üstünde süzülen bir kuğuya ya da '2' rakamına benzer.",
+      "tip": "M16'nın ~2,5° güneyinde; Kalkan'ın (Scutum) güney ucuna yakın."
+    },
+    "M20": {
+      "name": "Trifid Bulutsusu", "distanceLy": 4100,
+      "info": "Karanlık toz şeritleriyle üç parçaya bölünmüş görünen bulutsu; hem kırmızı salma hem mavi yansıma bulutsusu içerir.",
+      "tip": "Lagün Bulutsusu'nun (M8) ~1,5° kuzeyinde."
+    },
+    "M22": {
+      "name": "Yay Küresel Kümesi", "featured": true, "distanceLy": 10600,
+      "info": "Gökyüzünün en parlak küresel kümelerinden ve bize en yakınlarından. Türkiye'den alçakta kalsa da etkileyici.",
+      "tip": "Çaydanlığın kapağı Kaus Borealis'in (λ Sgr) ~2,5° kuzeydoğusunda."
+    },
+    "M24": { "name": "Küçük Yay Yıldız Bulutu", "info": "Samanyolu'nun daha uzaktaki bir kolunu görmemizi sağlayan, toz bulutları arasındaki bir 'pencere'. Dürbünle muhteşem." },
+    "M27": {
+      "name": "Halter Bulutsusu", "featured": true, "distanceLy": 1360,
+      "info": "İlk keşfedilen gezegenimsi bulutsu (Messier, 1764): ölen bir yıldızın dışarı üflediği gaz kabuğu. Küçük teleskopta yenmiş bir elma koçanına ya da halter ağırlığına benzer.",
+      "tip": "Ok takımyıldızının ucundaki Gamma Sagittae'den (γ Sge) ~3° kuzeye. 25 mm (37×) ile bile belirgin."
+    },
+    "M29": { "distanceLy": 4000, "info": "Kuğu'nun göğsündeki küçük açık küme; 4–5 parlak yıldızı minik bir 'soğutma kulesi' gibi dizilmiş." },
+    "M31": {
+      "name": "Andromeda Galaksisi", "featured": true, "distanceLy": 2500000,
+      "info": "Samanyolu'nun dev komşusu: ~1 trilyon yıldızdan oluşan sarmal bir galaksi. Çıplak gözle görülebilen en uzak cisimlerden; gördüğün ışık 2,5 milyon yıl önce yola çıktı. Yanındaki M32 ve M110 onun uydu galaksileri.",
+      "tip": "Kraliçe'nin (Kassiopeia) 'W'sinin derin V'si aşağıyı gösterir; ya da Mirach'tan (β And) iki yıldız kuzeybatıya atla (μ And, ν And): ν'nin hemen yanında oval bir parıltı. 25 mm ile bak; galaksi görüş alanından büyüktür."
+    },
+    "M32": {
+      "featured": false, "distanceLy": 2500000,
+      "info": "Andromeda Galaksisi'nin cüce eliptik uydusu. Küçük, parlak, yıldız benzeri bir çekirdek gibi görünür.",
+      "tip": "M31'in çekirdeğinin ~0,4° güneyinde; aynı görüş alanında."
+    },
+    "M33": {
+      "name": "Üçgen Galaksisi", "featured": true, "distanceLy": 2730000,
+      "info": "Yerel Grup'un üçüncü büyük galaksisi. Işığı geniş alana yayıldığı için yüzey parlaklığı çok düşük: şehirde neredeyse görünmez, karanlık gökyüzünde ise düşük büyütmede büyük, soluk bir lekedir.",
+      "tip": "Mirach'tan (β And) M31'in ters yönüne, güneydoğuya ~7°. En düşük büyütmeyi kullan ve gözünü yana kaydırarak bak (yan bakış)."
+    },
+    "M34": {
+      "featured": true, "distanceLy": 1500,
+      "info": "Dolunay büyüklüğünde, yaklaşık 100 yıldızlı parlak bir açık küme.",
+      "tip": "Algol (β Per) ile Almach (γ And) arasındaki çizginin ortasının biraz kuzeyinde."
+    },
+    "M35": {
+      "featured": true, "distanceLy": 2800,
+      "info": "İkizler'in ayağındaki zengin açık küme. Aynı alanda ~5 kat daha uzaktaki (~11.000 ışık yılı) küçük, sisli NGC 2158 kümesi de görülür.",
+      "tip": "İkizler'in ayağındaki Eta Geminorum'un (η Gem) ~2° kuzeybatısında."
+    },
+    "M36": {
+      "featured": true, "distanceLy": 4100,
+      "info": "Arabacı'daki üç parlak açık kümeden en küçüğü ve en sıkısı.",
+      "tip": "Arabacı beşgeninin ortasından Elnath'a (β Tau) doğru; M37 ve M38 ile neredeyse düz bir çizgi üzerinde."
+    },
+    "M37": {
+      "featured": true, "distanceLy": 4500,
+      "info": "Arabacı'nın üç kümesinin en zengini: ince bir toz gibi yüzlerce sönük yıldız, ortasında turuncu bir yıldız.",
+      "tip": "Theta Aurigae (θ Aur) ile Elnath (β Tau) arasındaki çizginin ortasının ~2° doğusunda."
+    },
+    "M38": {
+      "featured": true, "distanceLy": 4200,
+      "info": "Haç ya da Yunan harfi π şeklinde dizilmiş yıldızlarıyla tanınan açık küme.",
+      "tip": "Arabacı beşgeninin içinde, M36'nın ~2,5° kuzeybatısında."
+    },
+    "M39": {
+      "distanceLy": 1000,
+      "info": "Geniş, seyrek, parlak yıldızlı bir açık küme; düşük büyütmede ya da dürbünle en iyisi.",
+      "tip": "Deneb'in ~9° doğusunda, Kuğu'nun kuyruğunun yakınında."
+    },
+    "M41": {
+      "featured": true, "distanceLy": 2300,
+      "info": "Kış gökyüzünün parlak açık kümelerinden; ortasına yakın kırmızımsı bir yıldız var.",
+      "tip": "Gökyüzünün en parlak yıldızı Sirius'un yalnızca 4° güneyinde."
+    },
+    "M42": {
+      "name": "Büyük Orion Bulutsusu", "featured": true, "distanceLy": 1344,
+      "info": "Bize en yakın büyük yıldız doğum bölgesi: binlerce yeni yıldız bu gaz bulutunun içinde doğuyor. Kalbindeki dört genç yıldız 'Trapez' (Trapezium) olarak bilinir ve bulutsuyu aydınlatır. Kuzey gökyüzünün en etkileyici bulutsusu.",
+      "tip": "Orion'un kemerindeki üç yıldızın altında sarkan 'kılıcın' ortasındaki bulanık yıldız. Çıplak gözle bile görünür; 25 mm ile kanat gibi açılan gazı, 10 mm ile Trapez'i incele."
+    },
+    "M43": {
+      "name": "De Mairan Bulutsusu", "distanceLy": 1344,
+      "info": "Orion Bulutsusu'nun karanlık bir toz şeridiyle ayrılmış kuzey parçası; virgül şeklinde.",
+      "tip": "M42'nin hemen kuzeyinde, aynı görüş alanında."
+    },
+    "M44": {
+      "name": "Arı Kovanı Kümesi", "featured": true, "distanceLy": 577,
+      "info": "Praesepe olarak da bilinen, bize en yakın açık kümelerden. Antik çağdan beri bilinir; yıldızlarına ilk kez Galileo teleskopla ayırdı. 1,5° genişliğinde: dürbün ya da en düşük büyütme ideal.",
+      "tip": "Pollux ile Regulus'un kabaca ortasında, Yengeç takımyıldızında. Karanlıkta çıplak gözle bulanık bir leke."
+    },
+    "M45": {
+      "name": "Ülker (Pleiades)", "featured": true, "distanceLy": 444,
+      "info": "Gökyüzünün en ünlü yıldız kümesi; Japoncada 'Subaru'. Yaklaşık 100 milyon yaşında, genç ve sıcak mavi yıldızlardan oluşur. Çıplak gözle 6–7 yıldız seçilir, dürbünle onlarca.",
+      "tip": "Aldebaran'ın ~14° kuzeybatısındaki minik 'kepçe'. 2°'lik boyutuyla teleskobun görüş alanına sığmaz: dürbün ya da 25 mm ile gezin."
+    },
+    "M46": {
+      "featured": true, "distanceLy": 5400,
+      "info": "Yüzlerce sönük yıldızdan oluşan zengin bir açık küme. İçinde küçük bir gezegenimsi bulutsu (NGC 2438) görünür; aslında kümenin önünde, bize daha yakın.",
+      "tip": "M47'nin ~1° doğusunda; Sirius'tan doğuya ~14°."
+    },
+    "M47": {
+      "featured": true, "distanceLy": 1600,
+      "info": "Parlak, seyrek yıldızlı açık küme; komşusu M46'nın tam tersi bir görünüm.",
+      "tip": "M46'nın ~1° batısında."
+    },
+    "M48": { "distanceLy": 1500, "info": "Su Yılanı'ndaki geniş, parlak açık küme." },
+    "M49": { "distanceLy": 56000000, "info": "Başak Galaksi Kümesi'nin en parlak üyesi: dev bir eliptik galaksi." },
+    "M50": { "distanceLy": 3200, "info": "Tekboynuz'daki kalp şeklinde bir açık küme." },
+    "M51": {
+      "name": "Girdap Galaksisi", "featured": true, "distanceLy": 23000000,
+      "info": "Yüzü bize dönük, klasik bir sarmal galaksi; küçük komşusu NGC 5195 ile etkileşiyor. Sarmal kolları ilk kez 1845'te Lord Rosse dev teleskobuyla çizdi. 130 mm'de karanlık gökyüzünde iki çekirdek, şanslı gecelerde kolların izi.",
+      "tip": "Büyükayı'nın sapının ucundaki Alkaid'den (η UMa) ~3,5° güneybatıya."
+    },
+    "M52": {
+      "featured": true, "distanceLy": 5000,
+      "info": "Kassiopeia'daki zengin, sıkı bir açık küme.",
+      "tip": "Kassiopeia'nın Schedar (α Cas) – Caph (β Cas) çizgisini Caph'tan ~6,5° uzat."
+    },
+    "M53": {
+      "distanceLy": 58000,
+      "info": "Galaksi merkezinden en uzak küresel kümelerden biri.",
+      "tip": "Alpha Comae'nin (α Com) ~1° kuzeydoğusunda."
+    },
+    "M57": {
+      "name": "Halka Bulutsusu", "featured": true, "distanceLy": 2300,
+      "info": "Ölen bir yıldızın dış katmanlarını uzaya üflemesiyle oluşmuş gezegenimsi bulutsu; içi boş bir duman halkası gibi görünür. Güneş de ~5 milyar yıl sonra benzer bir son yaşayacak.",
+      "tip": "Çalgı'daki Sheliak (β Lyr) ile Sulafat (γ Lyr) yıldızlarının tam arasında, biraz Sheliak'a yakın. 10 mm (92×) ile küçük, gri bir simit."
+    },
+    "M63": {
+      "name": "Ayçiçeği Galaksisi", "featured": true, "distanceLy": 29000000,
+      "info": "Kolları ayçiçeği tohumları gibi parçalı görünen sarmal galaksi; teleskopta parlak çekirdekli oval bir ışık.",
+      "tip": "Cor Caroli (α CVn) ile Alkaid (η UMa) arasındaki çizginin ~1/3'ünde, Cor Caroli tarafında."
+    },
+    "M64": {
+      "name": "Kara Göz Galaksisi", "featured": true, "distanceLy": 17000000,
+      "info": "Çekirdeğinin önündeki koyu toz şeridi yüzünden 'kara göz' ya da 'şeytan gözü' olarak bilinir. İç ve dış bölgeleri ters yönlerde dönüyor.",
+      "tip": "Berenis'in Saçı'nda, 35 Comae yıldızının ~1° kuzeydoğusunda."
+    },
+    "M65": {
+      "featured": true, "distanceLy": 35000000,
+      "info": "'Aslan Üçlüsü'nün bir üyesi: yandan görünen, uzun oval bir sarmal galaksi.",
+      "tip": "Aslan'ın arka bacağında, Chertan (θ Leo) ile Iota Leonis (ι Leo) arasının ortasında. M66 ve NGC 3628 ile aynı düşük büyütmeli alanda."
+    },
+    "M66": {
+      "featured": true, "distanceLy": 36000000,
+      "info": "Aslan Üçlüsü'nün en parlak üyesi; komşularıyla kütle çekimi etkileşimi kollarını bozmuş.",
+      "tip": "M65'in ~20' doğusunda."
+    },
+    "M67": {
+      "featured": true, "distanceLy": 2700,
+      "info": "Bilinen en yaşlı açık kümelerden (~4 milyar yıl, Güneş'le yaşıt). Açık kümeler genelde dağılıp gider; bu küme şaşırtıcı biçimde hayatta kalmış.",
+      "tip": "Yengeç'teki Acubens'in (α Cnc) ~2° batısında."
+    },
+    "M71": {
+      "distanceLy": 13000,
+      "info": "Gevşek yapısı yüzünden uzun süre açık küme sanılan küresel küme.",
+      "tip": "Ok takımyıldızının gövdesinde, Delta (δ Sge) ile Gamma Sagittae (γ Sge) arasında."
+    },
+    "M74": { "distanceLy": 32000000, "info": "Yüzü bize dönük kusursuz bir sarmal; ama yüzey parlaklığı o kadar düşük ki 'hayalet galaksi' diye anılır. Karanlık gökyüzü ister." },
+    "M76": {
+      "name": "Küçük Halter Bulutsusu", "featured": true, "distanceLy": 2500,
+      "info": "M27'nin küçük ve sönük bir kopyası; Messier listesinin en zor cisimlerinden.",
+      "tip": "Kassiopeia ile Perseus sınırında, Phi Persei'nin (φ Per) ~1° kuzeyinde."
+    },
+    "M77": { "info": "Merkezinde aktif bir kara delik barındıran (Seyfert) parlak çekirdekli sarmal galaksi." },
+    "M78": { "distanceLy": 1350, "info": "Gökyüzünün en parlak yansıma bulutsusu: yakındaki yıldızların ışığını yansıtan toz bulutu." },
+    "M79": { "distanceLy": 41000, "info": "Tavşan takımyıldızındaki küresel küme; muhtemelen Samanyolu'nun yuttuğu bir cüce galaksiden kalma." },
+    "M81": {
+      "name": "Bode Galaksisi", "featured": true, "distanceLy": 12000000,
+      "info": "Parlak çekirdekli büyük bir sarmal galaksi; komşusu M82 ile kütle çekimi dansında. İkisi düşük büyütmede aynı görüş alanına sığar — 130 mm için en güzel galaksi çiftlerinden.",
+      "tip": "Büyükayı'nın kasesinde Phecda'dan (γ UMa) Dubhe'ye (α UMa) bir çizgi çiz, Dubhe'den aynı yönde ~10° devam et."
+    },
+    "M82": {
+      "name": "Puro Galaksisi", "featured": true, "distanceLy": 12000000,
+      "info": "Kenardan görünen, yoğun yıldız oluşumu yaşayan ('starburst') galaksi. M81 ile yakın geçişi bu yıldız patlamasını tetikledi.",
+      "tip": "M81'in ~0,6° kuzeyinde; 25 mm ile ikisini birlikte gör."
+    },
+    "M83": { "name": "Güney Fırıldak Galaksisi", "distanceLy": 15000000, "info": "Parlak, çubuklu bir sarmal galaksi. Türkiye'den ufka yakın kalır." },
+    "M87": {
+      "name": "Başak A Galaksisi", "distanceLy": 53000000,
+      "info": "Dev bir eliptik galaksi. 2019'da yayımlanan insanlığın ilk kara delik fotoğrafı (Olay Ufku Teleskobu), bu galaksinin merkezindeki 6,5 milyar Güneş kütleli kara deliğe aitti.",
+      "tip": "Başak Galaksi Kümesi'nin kalbinde; Denebola ile Vindemiatrix (ε Vir) arasında."
+    },
+    "M92": {
+      "featured": true, "distanceLy": 26700,
+      "info": "M13'ün gölgesinde kalan ama ondan geri kalmayan güzel bir küresel küme; Samanyolu'nun en yaşlı kümelerinden.",
+      "tip": "Herkül'ün 'kilit taşı'nın kuzeydoğu köşesi Pi Herculis'ten (π Her) ~6° kuzeye."
+    },
+    "M94": {
+      "featured": true, "distanceLy": 16000000,
+      "info": "Çok parlak, yoğun çekirdekli bir sarmal galaksi; şehir kenarından bile seçilebilir.",
+      "tip": "Cor Caroli'nin (α CVn) ~3° kuzeyinde; Chara (β CVn) ve Cor Caroli ile küçük bir dik üçgen oluşturur."
+    },
+    "M97": {
+      "name": "Baykuş Bulutsusu", "featured": true, "distanceLy": 2000,
+      "info": "İki karanlık 'göz' bölgesi nedeniyle baykuş yüzüne benzeyen gezegenimsi bulutsu. Gözleri görmek için karanlık gökyüzü ve sabır gerekir.",
+      "tip": "Büyükayı'nın kasesinin alt köşesi Merak'ın (β UMa) ~2,3° güneydoğusunda; yakınında kenardan görünen galaksi M108 var."
+    },
+    "M101": {
+      "name": "Fırıldak Galaksisi", "featured": true, "distanceLy": 21000000,
+      "info": "Samanyolu'nun neredeyse iki katı büyüklüğünde, yüzü bize dönük dev bir sarmal galaksi. Işığı geniş alana yayıldığı için düşük yüzey parlaklığına sahip; karanlık gökyüzü ister.",
+      "tip": "Büyükayı'nın sapındaki Mizar ve Alkaid ile kuzeye doğru eşkenar bir üçgen oluşturur."
+    },
+    "M103": {
+      "featured": true, "distanceLy": 8500,
+      "info": "Ok ucu ya da küçük bir yelpaze şeklinde açık küme.",
+      "tip": "Kassiopeia'nın Ruchbah (δ Cas) yıldızının ~1° kuzeydoğusunda."
+    },
+    "M104": {
+      "name": "Sombrero Galaksisi", "featured": true, "distanceLy": 31000000,
+      "info": "Neredeyse tam kenardan gördüğümüz, ortasından koyu bir toz şeridi geçen galaksi; Meksika şapkasına benzer. Şerit 130 mm'de sakin ve karanlık gecelerde seçilebilir.",
+      "tip": "Başak ile Karga sınırında: Karga'nın Algorab (δ Crv) yıldızından kuzeydoğuya ~5°'lik sönük yıldız zinciriyle."
+    },
+    "M106": {
+      "featured": true, "distanceLy": 24000000,
+      "info": "Merkezinde aktif kara delik bulunan büyük, parlak bir sarmal galaksi.",
+      "tip": "Av Köpekleri'nde, Chara (β CVn) ile Phecda (γ UMa) arasındaki çizginin ortasına yakın."
+    },
+    "M108": { "distanceLy": 46000000, "info": "Kenardan görünen, benekli görünümlü bir sarmal galaksi; Baykuş Bulutsusu (M97) ile aynı bölgede." },
+    "M110": {
+      "distanceLy": 2700000,
+      "info": "Andromeda Galaksisi'nin ikinci parlak uydusu; M32'den büyük ama daha sönük ve yaygın.",
+      "tip": "M31'in çekirdeğinin ~0,6° kuzeybatısında."
+    },
+
+    "NGC869-884": {
+      "name": "Çift Küme (h ve χ Persei)", "featured": true, "distanceLy": 7500,
+      "info": "Yan yana duran iki genç, zengin açık küme. Karanlık gökyüzünde çıplak gözle Samanyolu içinde bulanık bir leke; 25 mm'lik mercekle ikisi birden görüş alanına sığar ve yüzlerce yıldız birden göz alır. Küçük teleskobun en güzel manzaralarından.",
+      "tip": "Perseus'un Mirfak (α Per) yıldızı ile Kassiopeia'nın Ruchbah (δ Cas) yıldızı arasındaki çizginin ortasının biraz kuzeyinde."
+    },
+    "NGC457": {
+      "name": "ET (Baykuş) Kümesi", "featured": true, "distanceLy": 7900,
+      "info": "İki parlak yıldızı göz, diğer yıldızları kollar ve gövde gibi duran; filmlerdeki ET'ye ya da kanatlarını açmış bir baykuşa benzeyen açık küme.",
+      "tip": "Kassiopeia'nın Ruchbah (δ Cas) yıldızından güneybatıya ~2°."
+    },
+    "NGC752": { "distanceLy": 1500, "info": "Andromeda'da, dürbünle ve en düşük büyütmeyle güzel görünen geniş, yaşlı bir açık küme." },
+    "NGC7789": {
+      "name": "Caroline'ın Gülü", "featured": true, "distanceLy": 7600,
+      "info": "Caroline Herschel'in 1783'te keşfettiği, yüzlerce sönük yıldızlı zengin küme; yıldızlar arasındaki karanlık boşluklar gül yaprağı izlenimi verir.",
+      "tip": "Kassiopeia'nın Caph (β Cas) ve Rho Cassiopeiae (ρ Cas) yıldızlarının arasında."
+    },
+    "NGC2244": { "name": "Gül Bulutsusu Kümesi", "distanceLy": 5200, "info": "Ünlü Gül (Rosette) Bulutsusu'nun ortasındaki genç küme. Küme kolayca görülür; çevresindeki bulutsu çok sönüktür ve filtre ister." },
+    "NGC2264": { "name": "Noel Ağacı Kümesi", "info": "Yıldızları ters dönmüş bir Noel ağacı gibi dizilmiş küme; tepesinde ünlü Koni Bulutsusu (görsel olarak çok zor) yer alır." },
+    "NGC2169": { "name": "'37' Kümesi", "info": "Yıldızları ayna görüntüsünde '37' rakamını oluşturan küçük, eğlenceli bir açık küme." },
+    "NGC2158": { "distanceLy": 11000, "info": "M35'in hemen yanında, çok daha uzak ve yaşlı, sisli görünümlü bir açık küme." },
+    "Mel20": {
+      "name": "Alfa Persei Kümesi", "distanceLy": 570,
+      "info": "Perseus'un en parlak yıldızı Mirfak'ın çevresindeki geniş yıldız topluluğu. Dürbün için mükemmel bir hedef; teleskop için fazla büyük.",
+      "tip": "Mirfak'ın (α Per) çevresi; dürbünü Mirfak'a çevirmen yeterli."
+    },
+    "Mel25": {
+      "name": "Hyadlar (Hyades)", "distanceLy": 153,
+      "info": "Bize en yakın açık küme; Boğa'nın 'V' şeklindeki yüzünü oluşturur. Parlak turuncu Aldebaran önünde görünür ama kümenin üyesi değil, bize çok daha yakın (65 ışık yılı).",
+      "tip": "Aldebaran'ın çevresindeki V şekli; çıplak gözle ve dürbünle bakılır, teleskop için çok büyük."
+    },
+    "Mel111": {
+      "name": "Berenis'in Saçı Kümesi", "distanceLy": 280,
+      "info": "Çıplak gözle karanlıkta sönük yıldız serpintisi olarak görülen büyük, yakın bir küme. Dürbün için ideal.",
+      "tip": "Aslan'ın kuyruğu Denebola ile Cor Caroli arasında."
+    },
+    "Cr399": {
+      "name": "Askı Yıldız Grubu (Coathanger)",
+      "info": "Dürbünde tıpatıp bir elbise askısı gibi duran yıldız dizilimi. Gerçek bir küme değil; yıldızlar farklı uzaklıklarda, sadece aynı doğrultudalar.",
+      "tip": "Kuğu'nun Albireo (β Cyg) yıldızının ~8° güneyinde, Tilkicik takımyıldızında. Dürbünle tara."
+    },
+    "NGC6543": { "name": "Kedi Gözü Bulutsusu", "featured": true, "distanceLy": 3300, "info": "Parlak, mavi-yeşil, küçük bir gezegenimsi bulutsu; Hubble fotoğraflarında iç içe kabuklar görünür. Yüksek büyütmeye dayanır." },
+    "NGC7662": { "name": "Mavi Kartopu Bulutsusu", "featured": true, "info": "Belirgin mavi-yeşil renkli, küçük, parlak bir disk. Şehirden bile görülebilen en kolay gezegenimsi bulutsulardan." },
+    "NGC6826": { "name": "Göz Kırpan Bulutsu", "info": "Doğrudan bakınca merkezdeki yıldız bulutsuyu bastırır, yana bakınca bulutsu belirir: bakışını değiştirdikçe 'göz kırpar'." },
+    "NGC7009": { "name": "Satürn Bulutsusu", "featured": true, "info": "Yanlarındaki ince çıkıntılar yüzünden halkalı Satürn'e benzeyen parlak, yeşilimsi bir gezegenimsi bulutsu." },
+    "NGC3242": { "name": "Jüpiter'in Hayaleti", "featured": true, "info": "Jüpiter büyüklüğünde, mavimsi, parlak bir disk olarak görünen gezegenimsi bulutsu." },
+    "NGC2392": { "name": "Eskimo Bulutsusu", "featured": true, "info": "Parlak merkez yıldızın çevresinde kürklü bir başlığa benzeyen gaz kabuğu." },
+    "NGC6210": { "name": "Kaplumbağa Bulutsusu", "info": "Herkül'de küçük, parlak, mavimsi bir gezegenimsi bulutsu." },
+    "NGC7027": { "info": "Gökyüzünün en yoğun ve genç gezegenimsi bulutsularından; çok küçük ve parlak." },
+    "NGC1535": { "name": "Kleopatra'nın Gözü", "info": "Irmak takımyıldızında küçük, mavi-gri bir göz gibi görünen gezegenimsi bulutsu." },
+    "NGC6572": { "info": "Belirgin yeşil-turkuaz renkli, çok küçük ve parlak bir gezegenimsi bulutsu." },
+    "NGC7293": { "name": "Sarmal (Helix) Bulutsusu", "distanceLy": 650, "info": "Bize en yakın gezegenimsi bulutsulardan; Ay'ın yarısı kadar büyük ama çok sönük. Karanlık gökyüzü ve en düşük büyütme gerekir; OIII filtresi çok yardımcı olur." },
+    "NGC6888": { "name": "Hilal Bulutsusu", "info": "Dev bir Wolf-Rayet yıldızının güçlü rüzgârlarıyla şişirdiği gaz kabuğu. OIII filtresi olmadan çok zor." },
+    "NGC6960": { "name": "Batı Peçe Bulutsusu (Cadı Süpürgesi)", "distanceLy": 2400, "info": "10–20 bin yıl önce patlamış bir süpernovanın ince ipliksi kalıntısı; parlak 52 Cygni yıldızının üzerinden geçer. OIII filtresiyle muhteşem, filtresiz neredeyse görünmez." },
+    "NGC6992": { "name": "Doğu Peçe Bulutsusu", "distanceLy": 2400, "info": "Peçe süpernova kalıntısının en parlak yayı. OIII ya da UHC filtresi gerekir." },
+    "NGC7000": { "name": "Kuzey Amerika Bulutsusu", "info": "Şekli Kuzey Amerika kıtasına benzeyen dev gaz bulutu. 2°'den büyük: teleskopta görülmez, karanlık gökyüzünde dürbünle ya da çıplak gözle bir parlaklık artışı olarak seçilir." },
+    "NGC4565": { "name": "İğne Galaksisi", "featured": true, "distanceLy": 40000000, "info": "Tam kenardan gördüğümüz, iğne gibi ince uzun bir sarmal galaksi; ortasından koyu toz şeridi geçer. Karanlık gökyüzü ister." },
+    "NGC4631": { "name": "Balina Galaksisi", "info": "Kenardan görünen, balina ya da ringa balığı şeklindeki büyük galaksi; yanında küçük 'yavru' NGC 4627." },
+    "NGC891": { "info": "Kenardan görünen, ortasından toz şeridi geçen zarif ama sönük bir sarmal; karanlık gökyüzü ister." },
+    "NGC253": { "name": "Heykeltıraş Galaksisi", "featured": true, "distanceLy": 11400000, "info": "'Gümüş Para' da denen, parlak, uzun oval bir galaksi. Türkiye'den ufka yakın kalır ama büyük ve parlak olduğu için değer." },
+    "NGC3628": { "name": "Hamburger Galaksisi", "distanceLy": 35000000, "info": "Aslan Üçlüsü'nün üçüncü üyesi: kenardan görünen, toz şeridi olan sönük bir galaksi." },
+    "NGC7331": { "featured": true, "distanceLy": 40000000, "info": "Samanyolu'nun 'ikizi' olarak anılan büyük, parlak bir sarmal galaksi." },
+    "NGC2403": { "distanceLy": 8000000, "info": "Zürafa takımyıldızında, M81 grubunun bir üyesi; büyük ve oldukça parlak bir sarmal." },
+    "NGC2903": { "featured": true, "info": "Messier'in gözünden kaçmış, Aslan'daki parlak bir sarmal galaksi." },
+    "NGC6946": { "name": "Havai Fişek Galaksisi", "info": "Son yüzyılda 10 süpernova gözlenen yüzü bize dönük bir sarmal; sönük, karanlık gökyüzü ister." },
+    "NGC5866": { "name": "İğ Galaksisi", "info": "Kenardan görünen, mercek şeklinde bir galaksi. Bazı kaynaklarda kayıp 'M102' olarak geçer." },
+    "NGC3115": { "name": "İğ (Spindle) Galaksisi", "info": "Sekstant takımyıldızında, kenardan görünen parlak, uzun bir mercek galaksi." },
+    "NGC4449": { "info": "Yıldız oluşumunun yoğun olduğu, düzensiz şekilli parlak bir cüce galaksi." },
+    "NGC5139": { "name": "Omega Centauri", "distanceLy": 17000, "info": "Samanyolu'nun en büyük küresel kümesi: ~10 milyon yıldız. Muhtemelen yutulmuş bir cüce galaksinin çekirdeği. Türkiye'nin güneyinden (Antalya, Mersin...) ufkun hemen üstünde kısa süre görülebilir." }
+  }
+}

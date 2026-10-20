@@ -1,0 +1,50 @@
+{
+  "Moon": {
+    "name": "Ay",
+    "info": "Dünya'nın tek doğal uydusu, ortalama 384.400 km uzakta. Teleskopta en etkileyici bölge, aydınlık ile karanlığın sınırı olan 'terminatör': burada kraterler ve dağlar uzun gölgeler düşürür. Dolunayda gölge olmadığı için yüzey düz ve göz kamaştırıcı görünür.",
+    "see": "Kraterler (Tycho, Kopernik, Clavius), koyu 'denizler' (lav ovaları), dağ sıraları ve terminatör boyunca uzanan gölgeler.",
+    "tip": "Gökyüzünün en kolay hedefi. Parlaklık göz yorarsa Ay filtresi kullan. Telefonunu göz merceğine yaslayıp (afokal) harika fotoğraflar çekebilirsin."
+  },
+  "Mercury": {
+    "name": "Merkür",
+    "info": "Güneş'e en yakın gezegen. Hep Güneş'in yakınında kaldığı için yalnızca alacakaranlıkta, ufka yakın görülür. Teleskopta küçük bir disk ve Ay gibi bir evre.",
+    "see": "Küçük, parlak bir disk ve evresi (yarım ya da hilal).",
+    "tip": "En büyük uzanım tarihlerinde gün batımından ~45 dk sonra ya da doğumundan önce, ufku açık bir yerden bak. Güneş ufkun üstündeyken teleskobu asla Güneş'e yakın bir yöne çevirme."
+  },
+  "Venus": {
+    "name": "Venüs",
+    "info": "Ay'dan sonra gökyüzünün en parlak cismi ('Çoban Yıldızı'). Kalın bulut örtüsü yüzünden yüzey ayrıntısı görülmez ama Ay gibi evreler gösterir; Galileo bunu görerek Güneş merkezli sistemi doğrulamıştı.",
+    "see": "Bembeyaz, evreli (hilal, yarım ya da şişkin) bir disk.",
+    "tip": "Gökyüzü tamamen kararmadan, alacakaranlıkta bakmak parıltıyı azaltır ve evreyi daha net gösterir."
+  },
+  "Mars": {
+    "name": "Mars",
+    "info": "Kızıl gezegen. Dünya'ya yaklaştığı karşı konum dönemlerinde (yaklaşık 26 ayda bir) teleskopta kutup başlığı ve koyu yüzey bölgeleri seçilir; diğer zamanlarda küçük, turuncu bir disktir.",
+    "see": "Turuncu disk; yakın dönemlerde beyaz kutup başlığı ve koyu bölgeler (Syrtis Major gibi).",
+    "tip": "Disk 10 yay saniyesinden küçükse ayrıntı beklemek zor. Ayrıntı için atmosferin sakin olduğu anları bekle."
+  },
+  "Jupiter": {
+    "name": "Jüpiter",
+    "info": "Güneş Sistemi'nin en büyük gezegeni: içine 1.300 Dünya sığar. 130 mm teleskopla iki belirgin bulut kuşağı, sakin gecelerde Büyük Kırmızı Leke ve 4 büyük Galile uydusu (İo, Europa, Ganymede, Kallisto) görülür. Uyduların dizilişi her gece, hatta saatler içinde değişir.",
+    "see": "Bulut kuşakları, 4 uydunun dizilişi; şanslıysan Büyük Kırmızı Leke ya da bir uydunun gezegenin üzerine düşen gölgesi.",
+    "tip": "Önce 25 mm ile bul, sonra 10 mm'ye geç. Ayrıntılar birkaç saniyelik sakin anlarda belirir: sabırla bakmaya devam et."
+  },
+  "Saturn": {
+    "name": "Satürn",
+    "info": "Halkalarıyla gökyüzünün en etkileyici manzarası; çoğu kişinin teleskopta ilk 'vay!' dediği an. 130 mm ile halkalar, en büyük uydusu Titan ve sakin gecelerde halkalardaki Cassini boşluğu görülebilir.",
+    "see": "Halkalar, gezegenin halkalara düşen gölgesi, Titan (yakınındaki sarımsı 'yıldız').",
+    "tip": "10 mm (92×) idealdir. Halkaların eğimi yıldan yıla değişir: 2025'te neredeyse tam kenardan görünüyordu, sonraki yıllarda yeniden açılıyor."
+  },
+  "Uranus": {
+    "name": "Uranüs",
+    "info": "Çıplak gözle görülebilme sınırında (5,7 kadir). Yan yatmış ekseniyle dönen bir buz devi; teleskopta küçük, yeşilimsi-mavi bir disk.",
+    "see": "Yıldızlardan ayırt edilmesini sağlayan yeşilimsi-mavi renk ve küçük disk.",
+    "tip": "Yerini bulmak için bu sayfadaki yön ve yükseklik bilgisini, ardından bir yıldız haritası uygulamasını kullan; rengine bak."
+  },
+  "Neptune": {
+    "name": "Neptün",
+    "info": "En uzak gezegen (7,8 kadir). Konumu matematikle hesaplanarak keşfedilen ilk gezegen (1846). 130 mm ile mavimsi bir 'yıldız' gibi görünür.",
+    "see": "Mavimsi, yıldız benzeri bir nokta.",
+    "tip": "Yıldız haritası şart. Yüksek büyütmede yıldızlardan farklı olarak minik bir disk gibi durur."
+  }
+}
