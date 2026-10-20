@@ -255,7 +255,7 @@ def write(catalog):
     # Her cisim tek satırda: hem küçük dosya hem okunabilir git diff'leri.
     lines = ",\n".join("    " + json.dumps(o, ensure_ascii=False) for o in catalog["objects"])
     meta = json.dumps(catalog["meta"], ensure_ascii=False, indent=2).replace("\n", "\n  ")
-    OUT.write_text(f'{{\n  "meta": {meta},\n  "objects": [\n{lines}\n  ]\n}}\n', encoding="utf-8")
+    OUT.write_text(f'{{\n  "meta": {meta},\n  "objects": [\n{lines}\n  ]\n}}\n', encoding="utf-8", newline="\n")
 
 
 def main():

@@ -2,7 +2,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { zonedTimeToUtc, tzOffsetMinutes, currentNightKey, addDaysToKey, daysBetweenKeys, formatDuration, formatPercent, dateKey } from '../core/format.js';
+import { zonedTimeToUtc, tzOffsetMinutes, currentNightKey, addDaysToKey, daysBetweenKeys, formatDuration, formatPercent, dateKey, formatTimeAt } from '../core/format.js';
 import { describeDirection, pointingInstruction, compassPoint, fistsFromAltitude, shortPosition } from '../core/directions.js';
 
 test('İstanbul öğlen 12:00 = 09:00 UTC (UTC+3, yaz saati yok)', () => {
@@ -30,6 +30,16 @@ test('Tarih anahtarı aritmetiği ay/yıl sınırlarını geçer', () => {
   assert.equal(addDaysToKey('2026-12-31', 1), '2027-01-01');
   assert.equal(addDaysToKey('2026-03-01', -1), '2026-02-28');
   assert.equal(daysBetweenKeys('2026-10-20', '2026-10-27'), 7);
+});
+
+test('Saat + bulunma eki Türkçe okunuşa uyar', () => {
+  const at = (iso) => formatTimeAt(new Date(iso), 'UTC');
+  assert.equal(at('2026-10-20T22:30:00Z'), "22:30'da");
+  assert.equal(at('2026-10-20T21:40:00Z'), "21:40'ta");
+  assert.equal(at('2026-10-20T23:00:00Z'), "23:00'te");
+  assert.equal(at('2026-10-20T20:00:00Z'), "20:00'de");
+  assert.equal(at('2026-10-20T00:00:00Z'), "00:00'da");
+  assert.equal(at('2026-10-20T01:06:00Z'), "01:06'da");
 });
 
 test('Süre ve yüzde biçimleri', () => {

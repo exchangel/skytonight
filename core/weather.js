@@ -52,7 +52,9 @@ async function getJson(url, fetchImpl) {
  *                    fetchedAt:Date, hours:Array<object>}>}
  */
 export async function fetchWeather(lat, lon, { fetchImpl = fetch } = {}) {
-  const common = `latitude=${lat.toFixed(4)}&longitude=${lon.toFixed(4)}&timezone=auto&timeformat=unixtime`;
+  // past_days=1: gece yarısını geçtikten sonra da içinde bulunduğumuz gecenin akşam
+  // saatleri (dün tarihli) veride kalsın; Open-Meteo aksi hâlde bugünün 00:00'ından başlar.
+  const common = `latitude=${lat.toFixed(4)}&longitude=${lon.toFixed(4)}&timezone=auto&timeformat=unixtime&past_days=1`;
   const forecastUrl = `${FORECAST_URL}?${common}&hourly=${FORECAST_VARS.join(',')}&forecast_days=${FORECAST_DAYS}`;
   const airUrl = `${AIR_QUALITY_URL}?${common}&hourly=${AIR_VARS.join(',')}&forecast_days=5`;
 

@@ -170,6 +170,7 @@ function oppositionEvents({ start, horizon }) {
     if (t > horizon) continue;
     const name = BODY_NAMES_TR[body];
     const past = t < start;
+    if (past && importance[body] < 2) continue; // Uranüs/Neptün için geçmiş karşı konum listeyi kalabalıklaştırmasın
     out.push({
       id: `opp-${body}-${t.toISOString().slice(0, 10)}`,
       type: 'opposition',

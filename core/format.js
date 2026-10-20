@@ -124,6 +124,27 @@ export function formatTime(date, timeZone) {
   return getFormatter(LOCALE, timeZone, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(date);
 }
 
+/**
+ * Bulunma hâli eki, sayının okunuşunun son kelimesine göre seçilir (ünlü uyumu + sertleşme):
+ * sıfır→da, bir→de, iki→de, üç→te, dört→te, beş→te, altı→da, yedi→de, sekiz→de, dokuz→da;
+ * on→da, yirmi→de, otuz→da, kırk→ta, elli→de.
+ */
+const UNIT_LOCATIVE = ['da', 'de', 'de', 'te', 'te', 'te', 'da', 'de', 'de', 'da'];
+const TENS_LOCATIVE = { 1: 'da', 2: 'de', 3: 'da', 4: 'ta', 5: 'de' };
+
+function locativeSuffix(n) {
+  if (n % 10 !== 0) return UNIT_LOCATIVE[n % 10];
+  if (n === 0) return 'da';
+  return TENS_LOCATIVE[n / 10];
+}
+
+/** "22:30'da", "21:40'ta", "23:00'te" — tam saatlerde saat, diğerlerinde dakika okunur. */
+export function formatTimeAt(date, timeZone) {
+  const text = formatTime(date, timeZone);
+  const [h, m] = text.split(':').map(Number);
+  return `${text}'${locativeSuffix(m === 0 ? h : m)}`;
+}
+
 /** "21 Ekim Çarşamba" */
 export function formatDate(date, timeZone) {
   return getFormatter(LOCALE, timeZone, { day: 'numeric', month: 'long', weekday: 'long' }).format(date);
