@@ -1,0 +1,3 @@
+# Satır sonlarını depoda LF olarak tut (Windows'ta da tutarlı diff için)
+* text=auto eol=lf
+*.png binary

@@ -1,0 +1,15 @@
+# Bağımlılıklar (sadece notifier + testler için)
+node_modules/
+
+# Katalog betiğinin indirdiği ham OpenNGC dosyaları
+.cache/
+
+# Yerel ortam / gizli bilgiler — asla commit'leme
+.env
+.env.*
+
+# Editör ve işletim sistemi artıkları
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

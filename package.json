@@ -1,0 +1,21 @@
+{
+  "name": "skytonight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bu gece gözlem yapmalı mıyım? Hava + gökyüzü + ekipmana göre gözlem asistanı.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "notify": "node notifier/run.mjs",
+    "notify:dry": "node notifier/run.mjs --dry-run",
+    "serve": "python -m http.server 8000"
+  },
+  "dependencies": {
+    "astronomy-engine": "2.1.19",
+    "nodemailer": "10.0.15"
+  }
+}
