@@ -1,0 +1,59 @@
+# Her gün öğleden sonra bu gecenin koşullarını hesaplar; eşiği aşan abonelere
+# ntfy (telefon) ve/veya e-posta bildirimi gönderir. Ayrıntılar: notifier/run.mjs
+#
+# Elle test: Actions sekmesi → "Gece bildirimi" → Run workflow
+#   dry_run = true  → hiçbir şey göndermez, mesajları logda gösterir
+#   force   = true  → eşiği yok sayar (kurulumun çalıştığını görmek için)
+
+name: Gece bildirimi
+
+on:
+  schedule:
+    # 13:00 UTC = 16:00 Türkiye. GitHub zamanlanmış işleri birkaç dakika–1 saat gecikmeli başlatabilir.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Gönderme, sadece logla"
+        type: boolean
+        default: true
+      force:
+        description: "Eşiği yok say, herkese gönder"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: write # canlı tutma adımı için (aşağıda)
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+
+      - name: Koşulları hesapla ve bildirim gönder
+        env:
+          NOTIFY_SUBSCRIBERS: ${{ secrets.NOTIFY_SUBSCRIBERS }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
+          FORCE: ${{ inputs.force && 'true' || 'false' }}
+        run: node notifier/run.mjs
+
+      # Public repolarda 60 gün hiç commit olmazsa GitHub zamanlanmış işleri durdurur.
+      # İş akışını API ile yeniden "etkin" işaretlemek bunu önlemeye yöneliktir; yine de
+      # durdurulursa Actions sekmesinden "Enable workflow" ile tekrar açılabilir.
+      - name: Zamanlanmış işi canlı tut
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow enable notify.yml --repo "${{ github.repository }}"
