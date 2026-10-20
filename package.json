@@ -12,7 +12,7 @@
     "test": "node --test \"tests/*.test.mjs\"",
     "notify": "node notifier/run.mjs",
     "notify:dry": "node notifier/run.mjs --dry-run",
-    "serve": "python -m http.server 8000"
+    "serve": "node scripts/serve.mjs"
   },
   "dependencies": {
     "astronomy-engine": "2.1.19",

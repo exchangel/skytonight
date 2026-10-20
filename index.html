@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SkyTonight — Bu gece gözlem yapmalı mıyım?</title>
+  <meta name="description" content="Konumuna göre bu gecenin gözlem koşulları (bulut, Ay, atmosfer, ışık kirliliği) ve teleskobunla görebileceğin gök cisimleri.">
+  <meta name="theme-color" content="#070a14">
+
+  <!-- iPhone'da "Ana Ekrana Ekle" ile uygulama gibi açılması için -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SkyTonight">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!--
+    Import map: core/ modülleri 'astronomy-engine' adıyla içe aktarır.
+    Tarayıcıda bu ad jsDelivr'daki sabit sürüme, Node'da (bildirim betiği) npm paketine çözülür.
+    Böylece aynı kod iki ortamda da değişmeden çalışır.
+  -->
+  <script type="importmap">
+    {
+      "imports": {
+        "astronomy-engine": "https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/esm/astronomy.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="SkyTonight ana sayfa">
+      <img src="icons/favicon.svg" alt="" width="28" height="28">
+      <span>Sky<strong>Tonight</strong></span>
+    </a>
+    <button class="location-btn" id="location-label" data-action="open-location" aria-label="Konum seç"></button>
+    <div class="topbar-actions">
+      <button class="icon-btn" data-action="toggle-red" aria-pressed="false" title="Kırmızı gece modu (gözün karanlığa alışmasını bozmaz)" aria-label="Kırmızı gece modu">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" data-action="open-settings" title="Ayarlar" aria-label="Ayarlar">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div id="banner"></div>
+    <section id="tonight" aria-live="polite">
+      <article class="card skeleton" aria-label="Yükleniyor"><div class="sk-line w40"></div><div class="sk-line w70"></div><div class="sk-line w55"></div></article>
+    </section>
+    <section id="timeline" class="section"></section>
+    <section id="week" class="section"></section>
+    <section id="picks" class="section"></section>
+    <section id="objects" class="section"></section>
+    <section id="events" class="section"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Hava: Open-Meteo · Gökyüzü: Astronomy Engine · Katalog: OpenNGC (CC-BY-SA 4.0)</p>
+    <p>Tahminler kesin değildir; gökyüzüne bir de kendin bak. ✨</p>
+  </footer>
+
+  <div id="sheet-root" class="sheet-root"></div>
+  <noscript><p class="noscript">SkyTonight çalışmak için JavaScript'e ihtiyaç duyar.</p></noscript>
+</body>
+</html>

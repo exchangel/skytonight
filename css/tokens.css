@@ -1,0 +1,86 @@
+/*
+ * tokens.css — Renk, yazı tipi ve boyut değişkenleri.
+ * Bütün bileşenler renkleri buradan alır; "kırmızı gece modu" sadece bu değişkenleri
+ * değiştirir. Kırmızı ışık, gözün karanlığa alışmasını (rodopsin) bozmaz: gözlem
+ * sırasında telefona bakıp tekrar teleskoba döndüğünde sönük cisimleri kaybetmezsin.
+ */
+
+:root {
+  color-scheme: dark;
+
+  --bg: #070a14;
+  --bg-deep: #03050b;
+  --surface: rgba(19, 25, 46, 0.66);
+  --surface-2: rgba(32, 41, 72, 0.55);
+  --surface-solid: #0f1528;
+  --border: rgba(150, 165, 220, 0.13);
+  --border-strong: rgba(150, 165, 220, 0.28);
+
+  --text: #eaeef9;
+  --text-dim: #a5aeca;
+  --text-faint: #6e799a;
+
+  --accent: #8d9fff;
+  --accent-strong: #6f82f7;
+  --accent-soft: rgba(141, 159, 255, 0.14);
+
+  --good: #3ee39a;
+  --ok: #ffca52;
+  --bad: #ff6b6b;
+  --none: #7d879f;
+  --hard: #ff9f5a;
+  --good-soft: rgba(62, 227, 154, 0.13);
+  --ok-soft: rgba(255, 202, 82, 0.13);
+  --bad-soft: rgba(255, 107, 107, 0.13);
+  --none-soft: rgba(125, 135, 159, 0.12);
+
+  --moon: #ece6c8;
+  --sky-glow-1: rgba(88, 101, 242, 0.2);
+  --sky-glow-2: rgba(168, 85, 247, 0.12);
+  --star-opacity: 1;
+
+  --radius-lg: 22px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.38);
+
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI Variable Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --gutter: 16px;
+  --page-max: 1120px;
+}
+
+:root[data-theme="red"] {
+  --bg: #000;
+  --bg-deep: #000;
+  --surface: rgba(38, 0, 0, 0.6);
+  --surface-2: rgba(58, 4, 2, 0.55);
+  --surface-solid: #120201;
+  --border: rgba(255, 64, 44, 0.18);
+  --border-strong: rgba(255, 64, 44, 0.36);
+
+  --text: #ff4f40;
+  --text-dim: #c9382c;
+  --text-faint: #8c261d;
+
+  --accent: #ff4f40;
+  --accent-strong: #e23d2f;
+  --accent-soft: rgba(255, 79, 64, 0.12);
+
+  /* Renk ayrımı kırmızı modda parlaklıkla yapılır; ✓ ~ ✕ sembolleri de ayrıca gösterilir. */
+  --good: #ff6b5d;
+  --ok: #d4453a;
+  --bad: #8f241a;
+  --none: #6b1f18;
+  --hard: #b8362b;
+  --good-soft: rgba(255, 107, 93, 0.14);
+  --ok-soft: rgba(212, 69, 58, 0.12);
+  --bad-soft: rgba(143, 36, 26, 0.18);
+  --none-soft: rgba(107, 31, 24, 0.14);
+
+  --moon: #ff6b5d;
+  --sky-glow-1: transparent;
+  --sky-glow-2: transparent;
+  --star-opacity: 0;
+}
