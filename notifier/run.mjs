@@ -93,8 +93,12 @@ async function main() {
   const targets = buildTargets({ catalog, planets, constellations });
   const siteUrl = process.env.SITE_URL || defaultSiteUrl();
   const needsMail = subscribers.some((s) => s.email);
-  const mailer = !DRY_RUN && needsMail && process.env.SMTP_USER && process.env.SMTP_PASS
-    ? createMailer({ user: process.env.SMTP_USER, pass: process.env.SMTP_PASS })
+  // Kopyala-yapıştırda gelen boşlukları temizle: Google uygulama şifresini "abcd efgh ijkl mnop"
+  // diye gösterir ama gerçek şifrede boşluk yoktur.
+  const smtpUser = (process.env.SMTP_USER || '').trim();
+  const smtpPass = (process.env.SMTP_PASS || '').replace(/\s+/g, '');
+  const mailer = !DRY_RUN && needsMail && smtpUser && smtpPass
+    ? createMailer({ user: smtpUser, pass: smtpPass })
     : null;
   if (needsMail && !mailer && !DRY_RUN) console.warn('⚠️  E-posta adresi olan abone var ama SMTP_USER/SMTP_PASS tanımlı değil; e-postalar atlanacak.');
 
