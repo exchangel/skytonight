@@ -37,10 +37,34 @@ const AIR_VARS = ['aerosol_optical_depth', 'dust'];
 /** Tahmin kaç gün ileri (bugün dahil). 7 gece + yarın sabah için 9 gün yeterli. */
 export const FORECAST_DAYS = 9;
 
+/** Geçici hatalarda yeniden deneme beklemeleri (ms). Toplam 3 deneme. */
+const RETRY_DELAYS = [2000, 6000];
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * JSON getirir; geçici sunucu hatalarında birkaç kez yeniden dener. Open-Meteo yoğunken
+ * bazen HTTP 200 ile "Unexpected error..." gibi düz metin döndürüyor, bu yüzden gövde
+ * önce metin olarak okunup sonra ayrıştırılır.
+ */
 async function getJson(url, fetchImpl) {
-  const res = await fetchImpl(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
-  return res.json();
+  let lastError;
+  for (let attempt = 0; attempt <= RETRY_DELAYS.length; attempt++) {
+    if (attempt > 0) await sleep(RETRY_DELAYS[attempt - 1]);
+    try {
+      const res = await fetchImpl(url);
+      const body = await res.text();
+      if (!res.ok) throw new Error(`HTTP ${res.status}: ${body.slice(0, 120)}`);
+      try {
+        return JSON.parse(body);
+      } catch {
+        throw new Error(`Geçersiz yanıt: ${body.slice(0, 120)}`);
+      }
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  throw new Error(`Hava servisine ulaşılamadı (${new URL(url).host}): ${lastError.message}`);
 }
 
 /**
