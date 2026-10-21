@@ -46,6 +46,13 @@ function defaultSiteUrl() {
   return `https://${owner.toLowerCase()}.github.io/${name}/`;
 }
 
+/** "halil@gmail.com" → "ha***l@gmail.com" (GitHub tam secret'ı loglarda *** yapar, bu yüzden maskeli yazılır). */
+function maskEmail(address) {
+  const [local, domain] = address.split('@');
+  if (!domain) return `"@" yok — tam adres olmalı (${address.length} karakter)`;
+  return `${local.slice(0, 2)}***${local.length > 3 ? local.slice(-1) : ''}@${domain}`;
+}
+
 /** Abone listesini okur ve doğrular; hatalı kayıtlar atlanır ama loglanır. */
 function parseSubscribers(raw) {
   if (!raw || !raw.trim()) throw new Error('NOTIFY_SUBSCRIBERS boş. README\'deki "Bildirim kurulumu" bölümüne bak.');
@@ -101,6 +108,9 @@ async function main() {
     ? createMailer({ user: smtpUser, pass: smtpPass })
     : null;
   if (needsMail && !mailer && !DRY_RUN) console.warn('⚠️  E-posta adresi olan abone var ama SMTP_USER/SMTP_PASS tanımlı değil; e-postalar atlanacak.');
+  // Giriş hatalarını teşhis etmek için: adresin maskeli hâli ve şifrenin yalnızca uzunluğu
+  // (Gmail uygulama şifresi 16 karakterdir). Şifrenin kendisi asla yazılmaz.
+  if (mailer) console.log(`E-posta hesabı: ${maskEmail(smtpUser)} · şifre uzunluğu ${smtpPass.length}${smtpPass.length === 16 ? '' : ' (16 olmalı!)'}`);
 
   console.log(`${subscribers.length} abone · ${DRY_RUN ? 'DENEME (gönderim yok)' : 'gerçek gönderim'}${FORCE ? ' · eşik yok sayılıyor' : ''}`);
   let failures = 0;
